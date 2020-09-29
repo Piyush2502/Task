@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<style type="text/css">
+
+		@media (max-width: 854px){
+			
+			#head{
+				display: none;
+			}
+			#hide{
+				display: none;
+			}
+		}
+		@media (max-width: 770px){
+			
+			#rand{
+				display: none;
+			}
+			#show{
+				display: block!important;
+			}
+
+		}
+		
+		.name{
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" id="head" style="margin-top: 5px;">
+			<div class="col-md-4">
+				<p><span style="color: green;">ATG.</span>WORLD</p>
+			</div>
+			<div class="col-md-4">
+				<form>
+					<i class="fas fa-search"></i>
+					<input type="text" name="" placeholder="Search for your favourite groups in ATG" class="form-control" style="border-radius: 30px;width: 325px;height: 28px;line-height: 28px;position: absolute;top: 0px;background: transparent;padding-left: 25px;left: 8px;">
+				</form>	
+			</div>
+			<div class="col-md-4">
+				<p style="text-align: right;">Create account.<span style="color: blue;">It's Free!</span><i class="fas fa-caret-down"></i></p>
+			</div>
+		</div>
+		<div class="row" style="background-image: url(images/banner.jpg); background-size: cover;">
+			<div class="col-md-4 text-center" style="margin-top: 250px;">
+				<h2 class="text-light">Computer Engineering.</h2>
+				<p class="text-light">142,765 Coputer Engineers follow this</p><br><br>
+			</div>
+		</div>
+	</div>
+	<br>
+
+	<div class="container">
+		<div class="row" id="rand">
+			<div class="col-md-2"><p>All Posts(32)</p></div>
+			<div class="col-md-1"><p>Article</p></div>
+			<div class="col-md-1"><p>Event</p></div>
+			<div class="col-md-1"><p>Education</p></div>
+			<div class="col-md-1"><p>Job</p></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<button class="btn btn-light">Write a post <i class="fas fa-caret-down"></i></button>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-primary"><i class="fas fa-caret-down"></i>Join Group</button>
+			</div>
+			<div class="col-md-2"></div>
+
+		</div>
+		<hr>
+		<div id="show" style="display: none;" class="row">
+			<b>Posts(342)</b><button class="btn btn-light" style="position: absolute;right: 10px; margin-bottom: 10px;">Filter All <i class="fas fa-caret-down"></i></button><br>
+		</div><br>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card">
+						<img src="images/c1.jpg" class="img-fluid card-img-top" style="height: 250px;">
+						<div class="card-body">				
+							<b><p class="detail"><i class="fas fa-edit"></i>Article</p></b>
+							<h4 class="detail comm" style="font-size: 27px;">What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
+							<p class="text-dark" style="margin-top: -20px;font-size: 20px;">I've worked in UX for the better part of a decade.From now on,I plan to rei...</p><br>
+							<div class="name">
+								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Sarthak Parma</h5>
+							</div>
+							<div class="name" style="position: absolute;right: 10px;">
+								<i class="fas fa-eye"></i> 1.4k Views <button class="btn btn-light"><i class="fas fa-share-alt"></i></button>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3" id="hide">
+				<br>
+				<i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> Noida,India<span style="position: absolute;right: 10px;"><i class="fas fa-pen"></i></span><hr>
+				<p class="text-center" style="font-size: 12px;"><i class="fas fa-exclamation-circle"></i> Your location will help us serve better and extend a personalized experience.</p><br>
+				<p class="text-center"><i class="fas fa-thumbs-up"></i> RECOMMENDED GROUPS</p>
+				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Leisure<button class="btn btn-dark" style="border-radius: 20px; margin-left: 50px;height: 24px;line-height: 10px;">following</button><br><br>
+				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Activism<button class="btn btn-light" style="border-radius: 20px; margin-left: 50px;height: 24px;line-height: 10px;">follow</button><br><br>
+				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp MBA<button class="btn btn-light" style="border-radius: 20px; margin-left: 75px;height: 24px;line-height: 10px;">follow</button><br><br>
+				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Philosophy<button class="btn btn-light" style="border-radius: 20px; margin-left: 30px;height: 24px;line-height: 10px;">follow</button><br><br>
+				<p style="text-align: right;"><a href="">See more...</a></p>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card">
+						<img src="images/c2.jpg" class="img-fluid card-img-top" style="height: 250px;">
+						<div class="card-body">				
+							<b><p class="detail"><i class="fas fa-microscope"></i>Education</p></b>
+							<h4 class="detail comm" style="font-size: 27px;">Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
+							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
+							<p class="text-dark" style="margin-top: -20px;font-size: 20px;">I've worked in UX for the better part of a decade.From now on,I plan to rei...</p><br>
+							<div class="name">
+								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Sarah Vest</h5>
+							</div>
+							<div class="name" style="position: absolute;right: 10px;">
+								<i class="fas fa-eye"></i> 1.4k Views <button class="btn btn-light"><i class="fas fa-share-alt"></i></button>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card">
+						<img src="images/c3.png" class="img-fluid card-img-top" style="height: 250px;">
+						<div class="card-body">				
+							<b><p class="detail"><i class="far fa-calendar-alt"></i> Meet Up</p></b>
+							<h4 class="detail comm" style="font-size: 27px;">Finance & Investment Elite Social Mixer @Lujiazui</h4>
+							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
+							<p><i class="far fa-calendar-alt"></i>Fri,12 Oct,2018<span style="margin-left: 100px;"><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</span></p>
+							<div style="border: 1px solid #cac2c2; border-radius :10px;">
+								<h6 style="color: red;" class="text-center">Visit Website</h6>
+							</div><br>
+							<div class="name">
+								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Ronal Jones</h5>
+							</div>
+							<div class="name" style="position: absolute;right: 10px;">
+								<i class="fas fa-eye"></i> 1.4k Views <button class="btn btn-light"><i class="fas fa-share-alt"></i></button>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card">
+						<div class="card-body">				
+							<b><p class="detail"><i class="fas fa-briefcase"></i> Job</p></b>
+							<h4 class="detail comm" style="font-size: 27px;">Software Developer</h4>
+							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
+							<p><i class="far fa-calendar-alt"></i>Innovaccer Analytics Private Ltd.<span style="margin-left: 100px;"><i class="fas fa-map-marker-alt"></i> Noida,India</span></p>
+							<div style="border: 1px solid #cac2c2; border-radius :10px;">
+								<h6 style="color: red;" class="text-center">Visit Website</h6>
+							</div><br>
+							<div class="name">
+								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Joseph Grey</h5>
+							</div>
+							<div class="name" style="position: absolute;right: 10px;">
+								<i class="fas fa-eye"></i> 1.4k Views <button class="btn-light btn"><i class="fas fa-share-alt"></i></button>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<br><br><br>
+	</div>
+</body>
+</html>
