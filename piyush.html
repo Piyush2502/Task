@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style type="text/css">
+      input,textarea{
+            background-color: #f1f2f9;
+            border-radius: 5px;
+             border: 1px solid #e8dbdb;
+          }
+      .ab{
+        border-radius: 5px;
+        display: inline-block; border: 1px solid #e8dbdb;padding: 10px;
+      }
+    </style>
+</head>
+<body>
+  <br><br><br>
+  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#a">Select event</button>
+
+  <div class="modal fade" id="a">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Event type</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Paid Event or Free event?</h5>
+          <div class="form-group ab" style="">
+            <input type="radio" id="radio1" name="check" class="">
+            <img src="images/free.jpg" height="50" width="50">
+          </div><!--col end-->
+          <div class="form-group ab">
+            <input type="radio" id="radio2" name="check" class="">
+            <img src="images/paid.jpg" height="50" width="50">
+          </div><!--col end-->
+        </div>
+        <div class="modal-footer">
+                    <button class="btn-info btn" id="first" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="modal fade" id="b">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Paid Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Single-cost event or multiple-cost event?</h5><br>
+          <div class="form-group">
+            <input type="radio" id="single" name="check1" class=""> <label>Single Cost</label>
+          </div><!--col end-->
+          <div class="form-group">
+            <input type="radio" id="multiple" name="check1" class=""><label>Multiple Cost</label>
+          </div><!--col end-->
+          
+        </div>
+        <div class="modal-footer">
+          <button class="btn-info btn" id="second" disabled>Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="modal fade" id="c">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">price and availibility</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+   </button>
+        </div>
+        <div class="modal-body">
+          <br>
+          <form style="border: 1px solid #e8dbdb;padding-left: 20px;">
+          <h4>Price of Ticket?</h4>
+          <div class="form-group">
+            <button class="btn btn-light"><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
+            <input type="text" name="text1" placeholder="Price per ticket">
+          </div>
+          <h4>Availability?</h4>
+          <div class="form-group">
+            <span style="border: 1px solid #e8dbdb;">
+               &nbsp<input type="radio" name="online" > Online
+            </span>&nbsp &nbsp
+            <span style="border: 1px solid #e8dbdb;">
+               &nbsp<input type="radio" name="online" > Offline
+            </span>
+          </div>
+        </form>
+          
+      </div>
+      <div class="modal-footer">
+           <button class="btn-info btn" id="second" data-dismiss='modal'>Done <i class="fas fa-check"></i></button>
+          </div>
+    </div>
+  </div> 
+</div>
+  <div class="modal fade" id="d">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button></div>
+          <h5 class="modal-title" id="exampleModalLabel" style="margin-left: -60px;">Multiple Ticket</h5> 
+          <button class="btn text-primary" id="category" >+ Category</button>
+        </div>
+        <div class="modal-body">
+          1.
+          <div style="border: 1px solid #e8dbdb;padding-left: 20px;">
+            <label>Category?</label><br>
+          <div class="form-group">
+                        <button class="btn btn-light"><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
+            <!-- <input type="text" name="" placeholder="Example:Food,Entry etc" required=""> -->
+            <select id="select">
+              <option>Example : food</option>
+              <option>Parking</option>
+              <option>Food</option>
+            </select>
+            <span id="add_select" style="display: none;">
+              <input type="text" name="add" id="add">
+              <button class="btn btn-light" id="add_btn">ADD</button>
+            </span>
+          </div>
+          <label>Description?</label><br>
+          <div class="form-group">
+            <textarea placeholder="Description" required="">
+              
+            </textarea>
+          </div>
+          <label>Ticket price for this category</label><br>
+          <div class="form-group">
+            <input type="text" name="" placeholder="Price per Ticket">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p style="position: absolute;left: 0px;">Total cost: $ 0</p>
+        <button class="btn btn-info" id="second" data-dismiss='modal'>Done <i class="fas fa-check"></i></button>
+      </div>
+    </div>
+  </div> 
+</div>
+  <script>
+   $(document).ready(function(){
+    $("#radio1").on("click",function(){
+      document.getElementById('first').innerText='Done';
+     $('#first').removeAttr("disabled");
+     $('#first').attr('data-dismiss',"modal")
+    })
+    $("#radio2").on("click",function(){
+      document.getElementById('first').innerText="Next";
+     $('#first').removeAttr('disabled');
+     $('#first').removeAttr("data-dismiss");
+     $('#first').attr({'data-target':"#b",'data-toggle':"modal",'data-dismiss':"modal"})
+    });
+    $("#single").on("click",function(){
+     $('#second').removeAttr("disabled");
+     $('#second').attr({'data-target':"#c",'data-toggle':"modal",'data-dismiss':"modal"})
+    })
+    $("#multiple").on("click",function(){
+     $('#second').removeAttr("disabled");
+     $('#second').attr({'data-target':"#d",'data-toggle':"modal",'data-dismiss':"modal"})
+    })
+    
+    $("#category").on("click",function(){
+      $("#add_select").removeAttr("style");
+    })
+    $("#add_btn").on("click",function(){
+      var a=document.getElementById('add').value;
+      var select=document.getElementById('select');
+      var newOption=document.createElement('option');
+      var newoptval=document.createTextNode(a);
+
+      newOption.appendChild(newoptval);
+      select.insertBefore(newOption,select.firstChild);
+    })
+
+   })
+  </script>
+</body>
+</html>
