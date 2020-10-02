@@ -1,207 +1,263 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Task 1</title>
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<style type="text/css">
-
-		@media (max-width: 854px){
-			
-			#head{
-				display: none;
-			}
-			#hide{
-				display: none;
-			}
-
-		}
-		@media (max-width: 770px){
-			
-			#rand{
-				display: none;
-			}
-			#show{
-				display: block!important;
-			}
-			.mob_view_buttons{
-				display: block!important;
-			}
-			.bt{
-				display: inline!important;
-				left: 70px;
-				bottom: 0px;
-			}
-
-		}
-		
-		.name{
-			display: inline-block;
-		}
-
-	</style>
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style type="text/css">
+      input,textarea{
+            background-color: #f1f2f9;
+            border-radius: 5px;
+             border: 1px solid #e8dbdb;
+          }
+      .ab{
+        border-radius: 5px;
+        display: inline-block; border: 1px solid #e8dbdb;padding: 10px;
+      }
+      #single_done{
+      	position: absolute;
+    right: 23px;
+    bottom: 22px;
+      }
+      li{
+      	font-weight: bold;
+      }
+      dd{
+      	margin-left: 30px;
+      }
+    </style>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row" id="head" style="margin-top: 5px;">
-			<div class="col-md-4">
-				<p><span style="color: green;">ATG.</span>WORLD</p>
-			</div>
-			<div class="col-md-4">
-				<form>
-					<i class="fas fa-search"></i>
-					<input type="text" name="" placeholder="Search for your favourite groups in ATG" class="form-control" style="border-radius: 30px;width: 325px;height: 28px;line-height: 28px;position: absolute;top: 0px;background: transparent;padding-left: 25px;left: 8px;">
-				</form>	
-			</div>
-			<div class="col-md-4">
-				<p style="text-align: right;">Create account.<span style="color: blue;">It's Free!</span><i class="fas fa-caret-down"></i></p>
-			</div>
-		</div>
-		<div class="row" style="background-image: url(images/banner.jpg); background-size: cover;">
-			<div class="col-md-4 text-center" style="margin-top: 250px;">
-				<h2 class="text-light">Computer Engineering.</h2>
-				<p class="text-light">142,765 Coputer Engineers follow this</p><br><br>
-			</div>
-		</div>
-		<div class="mob_view_buttons" style="display: none;">
-			<button class="btn" style="position:absolute;top: 0px;color: white;">
-				<i class="fas fa-long-arrow-alt-left"></i></button>
-			<button class="btn" style="position:absolute;top: 0px;right: 5px; color: white; border: 1px solid white;">Join Group</button>
-		</div>
-	</div>
-	<br>
+  <br><br><br>
+  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#a">Select event</button>
 
-	<div class="container">
-		<div class="row" id="rand">
-			<div class="col-md-2"><p>All Posts(32)</p></div>
-			<div class="col-md-1"><p>Article</p></div>
-			<div class="col-md-1"><p>Event</p></div>
-			<div class="col-md-1"><p>Education</p></div>
-			<div class="col-md-1"><p>Job</p></div>
-			<div class="col-md-2"></div>
-			<div class="col-md-2">
-				<button class="btn btn-light">Write a post <i class="fas fa-caret-down"></i></button>
-			</div>
-			<div class="col-md-2">
-				<button class="btn btn-primary"><i class="fas fa-caret-down"></i>Join Group</button>
-			</div>
-			<div class="col-md-2"></div>
-			<hr>
-		</div>
-		
-		<div id="show" style="display: none;" class="row">
-			<b>Posts(342)</b><button class="btn btn-light" style="position: absolute;right: 10px; margin-bottom: 10px;">Filter All <i class="fas fa-caret-down"></i></button><br>
-		</div><br>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="card">
-						<img src="images/c1.jpg" class="img-fluid card-img-top" style="height: 250px;">
-						<div class="card-body">				
-							<b><p class="detail"><i class="fas fa-edit"></i>Article</p></b>
-							<h4 class="detail comm" style="font-size: 27px;">What if famous brands had regular fonts? Meet RegulaBrands!</h4>
-							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
-							<p class="text-dark" style="margin-top: -20px;font-size: 20px;">I've worked in UX for the better part of a decade.From now on,I plan to rei...</p><br>
-							<div class="name">
-								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Sarthak Parma</h5>
-							</div>
-							<div class="name bt" style="position: absolute;right: 65px;">
-								<i class="fas fa-eye"></i> 1.4k Views
-							</div>
-							<div>
-								 <button class="btn btn-light" style="position: absolute;right: 10px;bottom: 30px;"><i class="fas fa-share-alt"></i></button>
-							</div>
-						</div>
-					</div>
-			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-3" id="hide">
-				<br>
-				<i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> Noida,India<span style="position: absolute;right: 10px;"><i class="fas fa-pen"></i></span><hr>
-				<p class="text-center" style="font-size: 12px;"><i class="fas fa-exclamation-circle"></i> Your location will help us serve better and extend a personalized experience.</p><br>
-				<p class="text-center"><i class="fas fa-thumbs-up"></i> RECOMMENDED GROUPS</p>
-				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Leisure<button class="btn btn-dark" style="border-radius: 20px; margin-left: 50px;height: 24px;line-height: 10px;">following</button><br><br>
-				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Activism<button class="btn btn-light" style="border-radius: 20px; margin-left: 50px;height: 24px;line-height: 10px;">follow</button><br><br>
-				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp MBA<button class="btn btn-light" style="border-radius: 20px; margin-left: 75px;height: 24px;line-height: 10px;">follow</button><br><br>
-				<i class="fas fa-user" style="font-size: 24px;"></i>&nbsp Philosophy<button class="btn btn-light" style="border-radius: 20px; margin-left: 30px;height: 24px;line-height: 10px;">follow</button><br><br>
-				<p style="text-align: right;"><a href="">See more...</a></p>
-			</div>
-		</div><br>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="card">
-						<img src="images/c2.jpg" class="img-fluid card-img-top" style="height: 250px;">
-						<div class="card-body">				
-							<b><p class="detail"><i class="fas fa-microscope"></i>Education</p></b>
-							<h4 class="detail comm" style="font-size: 27px;">Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
-							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
-							<p class="text-dark" style="margin-top: -20px;font-size: 20px;">I've worked in UX for the better part of a decade.From now on,I plan to rei...</p><br>
-							<div class="name">
-								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Sarah Vest</h5>
-							</div>
-							<div class="name bt" style="position: absolute;right: 65px;">
-								<i class="fas fa-eye"></i> 1.4k Views
-							</div>
-							<div>
-								 <button class="btn btn-light" style="position: absolute;right: 10px;bottom: 30px;"><i class="fas fa-share-alt"></i></button>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="card">
-						<img src="images/c3.png" class="img-fluid card-img-top" style="height: 250px;">
-						<div class="card-body">				
-							<b><p class="detail"><i class="far fa-calendar-alt"></i> Meet Up</p></b>
-							<h4 class="detail comm" style="font-size: 27px;">Finance & Investment Elite Social Mixer @Lujiazui</h4>
-							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
-							<p><i class="far fa-calendar-alt"></i>Fri,12 Oct,2018<span style="margin-left: 100px;"><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</span></p>
-							<div style="border: 1px solid #cac2c2; border-radius :10px;">
-								<h6 style="color: red;" class="text-center">Visit Website</h6>
-							</div><br>
-							<div class="name">
-								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Ronal Jones</h5>
-							</div>
-							<div class="name bt" style="position: absolute;right: 65px;">
-								<i class="fas fa-eye"></i> 1.4k Views
-							</div>
-							<div>
-								 <button class="btn btn-light" style="position: absolute;right: 10px;bottom: 30px;"><i class="fas fa-share-alt"></i></button>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div><br>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="card">
-						<div class="card-body">				
-							<b><p class="detail"><i class="fas fa-briefcase"></i> Job</p></b>
-							<h4 class="detail comm" style="font-size: 27px;">Software Developer</h4>
-							<h4 class="comm" style="text-align: right;position: relative;bottom: 60px;"><i class="fas fa-ellipsis-h"></i></h4>
-							<p><i class="far fa-calendar-alt"></i>Innovaccer Analytics Private Ltd.<span style="margin-left: 100px;"><i class="fas fa-map-marker-alt"></i> Noida,India</span></p>
-							<div style="border: 1px solid #cac2c2; border-radius :10px;">
-								<h6 style="color: red;" class="text-center">Visit Website</h6>
-							</div><br>
-							<div class="name">
-								<h5><i class="fas fa-user" style="font-size: 32px;"></i>&nbsp &nbsp Joseph Grey</h5>
-							</div>
-							<div class="name bt" style="position: absolute;right: 65px;">
-								<i class="fas fa-eye"></i> 1.4k Views
-							</div>
-							<div>
-								 <button class="btn btn-light" style="position: absolute;right: 10px;bottom: 30px;"><i class="fas fa-share-alt"></i></button>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-		<br><br><br>
-	</div>
+  <div class="modal fade" id="a">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Event type</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Paid Event or Free event?</h5>
+          <div class="form-group ab" style="">
+            <input type="radio" id="radio1" name="check" class="">
+            <img src="images/free.jpg" height="50" width="50">
+          </div><!--col end-->
+          <div class="form-group ab">
+            <input type="radio" id="radio2" name="check" class="">
+            <img src="images/paid.jpg" height="50" width="50">
+          </div><!--col end-->
+        </div>
+        <div class="modal-footer">
+                    <button class="btn-info btn" id="first" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="modal fade" id="b">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Paid Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Single-cost event or multiple-cost event?</h5><br>
+          <div class="form-group">
+            <input type="radio" id="single" name="check1" class=""> <label>Single Cost</label>
+          </div><!--col end-->
+          <div class="form-group">
+            <input type="radio" id="multiple" name="check1" class=""><label>Multiple Cost</label>
+          </div><!--col end-->
+          
+        </div>
+        <div class="modal-footer">
+          <button class="btn-info btn" id="second" disabled>Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="modal fade" id="c">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-toggle="modal" aria-label="Close" data-target="#b" data-dismiss="modal">
+          <i class="fas fa-long-arrow-alt-left" style="position: absolute;left: 20px;"></i>
+          </button>
+          <h5 class="modal-title" id="exampleModalLabel" style="margin-left: 60px;">Price and availability</h5>
+        </div>
+        <div class="modal-body">
+          <br>
+          <form style="border: 1px solid #e8dbdb;padding-left: 20px;" onsubmit="return single()" action="#">
+          <h4>Price of Ticket?</h4>
+          <div class="form-group">
+            <button class="btn btn-light"><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
+            <input type="text" id="single_price" placeholder="Price per ticket" required="">
+            <span  class="text-danger font-weight-bold" id="num"> </span>
+          </div>
+          <h4>Availability?</h4>
+          <div class="form-group">
+            <span style="border: 1px solid #e8dbdb;">
+               &nbsp<input type="radio" name="online" id="sr1" required=""> Online
+            </span>&nbsp &nbsp
+            <span style="border: 1px solid #e8dbdb;">
+               &nbsp<input type="radio" name="online" id="sr2" required=""> Offline
+            </span>
+          </div>
+          <input type="submit" name="" class="btn-info btn" id="single_done">
+        </form> 
+        <br><br><br>     
+      </div>
+    </div>
+  </div> 
+</div>
+  <div class="modal fade" id="d">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+          <button type="button" class="close" data-toggle="modal" aria-label="Close" data-target="#b" data-dismiss="modal">
+          <i class="fas fa-long-arrow-alt-left"></i>
+          </button></div>
+          <h5 class="modal-title" id="exampleModalLabel" style="margin-left: -60px;">Multiple Ticket</h5> 
+          <button class="btn text-primary" id="category" style="border: 1px solid blue;">+ Category</button>
+        </div>
+        <div class="modal-body">
+          <span  id="span">
+         	 	<ol>
+          			<li data-toggle="collapse" data-target="#cont1" id="h" style="display: none;"></li>
+  		    		<dd id="cont1" class="collapse"></dd>
+  		    		<li data-toggle="collapse" data-target="#cont2" id="h" style="display: none;"></li>
+  		    		<dd id="cont2" class="collapse"></dd>
+  		    		<li data-toggle="collapse" data-target="#cont3" id="h" style="display: none;"></li>
+  		    		<dd id="cont3" class="collapse"></dd>
+  		    		<li data-toggle="collapse" data-target="#cont4" id="h" style="display: none;"></li>
+  		    		<dd id="cont4" class="collapse"></dd>
+  		    		<li data-toggle="collapse" data-target="#cont5" id="h" style="display: none;"></li>
+  		    		<dd id="cont5" class="collapse"></dd>
+  		    		<li data-toggle="collapse" data-target="#cont6" id="h" style="display: none;"></li>
+  		    		<dd id="cont6" class="collapse"></dd>
+  				</ol>
+  			</span>
+          <div style="display: none" id='form'>
+          <form style="border: 1px solid #e8dbdb;padding-left: 20px;" onsubmit="return multi()" action="#">
+            <label>Category?</label><br>
+          <div class="form-group">
+                        <button class="btn btn-light"><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
+            <input type="text" id="multi_text" placeholder="Example:Food,Entry etc" required="">
+          </div>
+          <label>Description?</label><br>
+          <div class="form-group">
+            <textarea placeholder="Description" required id="desc">    
+            </textarea>
+            <span  class="text-warning font-weight-bold" id="t1"> </span>
+          </div>
+          <label>Ticket price for this category</label><br>
+          <div class="form-group">
+            <input type="text" id="multi_price" placeholder="Price per Ticket" required="">
+            <span  class="text-warning font-weight-bold" id="num1"> </span>
+            <input type="submit" class="btn btn-info" id="multi_done" value="Add">
+          </div>
+          
+        
+        <p style="position: absolute;left: 0px;">Total cost: $ <span id="total">0</span></p>
+        
+      </form>
+  </div>
+      <br><br><br>
+      </div>
+      <div class="modal-footer">
+      	<button class="btn btn-primary" id="last" disabled>Done </button>
+      </div>
+    </div>
+  </div> 
+</div>
+  <script type="text/javascript">
+   $(document).ready(function(){
+   	
+    $("#radio1").on("click",function(){
+      document.getElementById('first').innerText='Done';
+     $('#first').removeAttr("disabled");
+     $('#first').attr('data-dismiss',"modal")
+    })
+    $("#radio2").on("click",function(){
+      document.getElementById('first').innerText="Next";
+     $('#first').removeAttr('disabled');
+     $('#first').removeAttr("data-dismiss");
+     $('#first').attr({'data-target':"#b",'data-toggle':"modal",'data-dismiss':"modal"})
+    });
+    $("#single").on("click",function(){
+     $('#second').removeAttr("disabled");
+     $('#second').attr({'data-target':"#c",'data-toggle':"modal",'data-dismiss':"modal"})
+    })
+    $("#multiple").on("click",function(){
+     $('#second').removeAttr("disabled");
+     $('#second').attr({'data-target':"#d",'data-toggle':"modal",'data-dismiss':"modal"})
+    })
+    
+    $("#category").on("click",function(){
+      $("#form").removeAttr("style");
+    })
+    
+  })
+  </script>
+  <script type="text/javascript">
+  	var total=0;
+  	var count=0;
+  	function single(){
+    	var text=document.getElementById("single_price").value;
+    	
+    	if (isNaN(text)) {
+			document.getElementById("num").innerHTML="Only Digits";
+
+    		return false;
+    	}
+    	else{
+    		$('#single_done').attr('data-dismiss',"modal")
+    		return true;
+    	}
+
+    }
+   function multi(){
+      var cat=document.getElementById('multi_text').value;
+      var price=document.getElementById('multi_price').value;
+      var desc=document.getElementById('desc').value;
+      
+    	
+        if (isNaN(price)) {
+			document.getElementById("num1").innerHTML="Only Digits";
+    		return false;	
+    	}
+    	else{
+    		count=count+1;
+    		$('#span').removeAttr('style');
+    		var a=document.getElementsByTagName("li");
+    		var b=document.getElementsByTagName("dd");
+    		a[count-1].innerText=count+". "+cat+" "+price;
+    		a[count-1].style.display="block";
+    		b[count-1].innerText=desc;
+    		
+    		// document.getElementById("h").innerText=cat+" "+price;
+    		// document.getElementById("cont").innerText=desc;
+    		total=total+parseInt(price);
+    		document.getElementById("total").innerText=total;
+    		$('#last').removeAttr('disabled');
+
+    		return true;
+    	}
+    	
+
+    }
+  </script>
 </body>
 </html>
