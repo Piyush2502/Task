@@ -132,9 +132,10 @@
           <h5 class="modal-title" id="exampleModalLabel" style="margin-left: -60px;">Multiple Ticket</h5> 
           <button class="btn text-primary" id="category" style="border: 1px solid blue;">+ Category</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body"  style="height: 350px;" id="over">
           <span  id="span">
          	 	<ol>
+         	 		<dd id="fd" class="collapse">The charge for the entry ticket. </dd>
           			<li data-toggle="collapse" data-target="#cont1" id="h" style="display: none;"></li>
   		    		<dd id="cont1" class="collapse"></dd>
   		    		<li data-toggle="collapse" data-target="#cont2" id="h" style="display: none;"></li>
@@ -149,34 +150,30 @@
   		    		<dd id="cont6" class="collapse"></dd>
   				</ol>
   			</span>
-          <div style="display: none" id='form'>
+          <div id='form'>
           <form style="border: 1px solid #e8dbdb;padding-left: 20px;" onsubmit="return multi()" action="#">
             <label>Category?</label><br>
           <div class="form-group">
-                        <button class="btn btn-light"><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
+                        
             <input type="text" id="multi_text" placeholder="Example:Food,Entry etc" required="">
           </div>
           <label>Description?</label><br>
           <div class="form-group">
-            <textarea placeholder="Description" required id="desc">    
-            </textarea>
+            <input type="text" placeholder="Description" required id="desc" style="height: 50px;">    
             <span  class="text-warning font-weight-bold" id="t1"> </span>
           </div>
           <label>Ticket price for this category</label><br>
           <div class="form-group">
+            <button class="btn btn-light" disabled=""><i class="fas fa-rupee-sign"></i> <i class="fas fa-sort-down"></i></button>
             <input type="text" id="multi_price" placeholder="Price per Ticket" required="">
             <span  class="text-warning font-weight-bold" id="num1"> </span>
             <input type="submit" class="btn btn-info" id="multi_done" value="Add">
           </div>
-          
-        
-        <p style="position: absolute;left: 0px;">Total cost: $ <span id="total">0</span></p>
-        
       </form>
   </div>
-      <br><br><br>
       </div>
       <div class="modal-footer">
+      	<p style="position: absolute;left: 0px;">Total cost: $ <span id="total">100</span></p>
       	<button class="btn btn-primary" id="last" disabled>Done </button>
       </div>
     </div>
@@ -205,14 +202,17 @@
      $('#second').attr({'data-target':"#d",'data-toggle':"modal",'data-dismiss':"modal"})
     })
     
-    $("#category").on("click",function(){
-      $("#form").removeAttr("style");
+    $("#category").on("click",function(divName){
+      var a=document.createElement("div");
+      a.innerHTML="<button style='position:absolute;right:20px;' class='btn btn-light' onclick='del();'>-</button><form style='border: 1px solid #e8dbdb;padding-left: 20px;' onsubmit='return multi()' action='#'><label>Category?</label><br> <div class='form-group'>            <input type='text' id='multi_text' placeholder='Example:Food,Entry etc' required=''>          </div>          <label>Description?</label><br>          <div class='form-group'>            <input type='text' placeholder='Description' required id='desc' style='height: 50;'>             <span  class='text-warning font-weight-bold' id='t1'> </span>          </div>          <label>Ticket price for this category</label><br>          <div class='form-group'>            <button class='btn btn-light' disabled=''><i class='fas fa-rupee-sign'></i> <i class='fas fa-sort-down'></i></button>            <input type='text' id='multi_price' placeholder='Price per Ticket' required=''>            <span  class='text-warning font-weight-bold' id='num1'> </span>            <input type='submit' class='btn btn-info' id='multi_done' value='Add'>          </div>      </form>";
+      document.getElementById('form').appendChild(a);
+      document.getElementById("over").style.overflow="scroll";
     })
     
   })
   </script>
   <script type="text/javascript">
-  	var total=0;
+  	var total=100;
   	var count=0;
   	function single(){
     	var text=document.getElementById("single_price").value;
@@ -243,9 +243,10 @@
     		$('#span').removeAttr('style');
     		var a=document.getElementsByTagName("li");
     		var b=document.getElementsByTagName("dd");
-    		a[count-1].innerText=count+". "+cat+" "+price;
-    		a[count-1].style.display="block";
-    		b[count-1].innerText=desc;
+    		a[count].style.display="block";
+    		a[count].innerText=(count)+". "+cat+" "+price;
+    		
+    		b[count].innerText=desc;
     		
     		// document.getElementById("h").innerText=cat+" "+price;
     		// document.getElementById("cont").innerText=desc;
@@ -257,6 +258,10 @@
     	}
     	
 
+    }
+    function del(){
+    	var a=document.getElementById("form");
+    	a.removeChild(a.childNodes[1]);
     }
   </script>
 </body>
